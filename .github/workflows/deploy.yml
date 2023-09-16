@@ -36,7 +36,7 @@ jobs:
           path: test.json
   
   build:
-  
+
     needs: test
     runs-on: ubuntu-latest
     steps:
@@ -68,8 +68,8 @@ jobs:
         id: deploy
         uses: ./.github/actions/deploy-s3-docker
         env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_ACCESS_KEY_ID: AKIA246IANZVBYYMUZMX
+          AWS_SECRET_ACCESS_KEY: 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
         with:
           bucket: gha-custom-action-hosting1
           dist-folder: ./dist
